@@ -166,6 +166,7 @@ client = RESTClient(api_key=POLYGON_API_KEY)
 
 @st.cache_data(ttl=300)
 def get_stock_data():
+    client = RESTClient(api_key=POLYGON_API_KEY)
     try:
         ticker = "LI"
         aggs = list(client.get_aggs(
@@ -214,6 +215,7 @@ def get_stock_data():
 
 @st.cache_data(ttl=3600)
 def get_historical_data():
+    client = RESTClient(api_key=POLYGON_API_KEY)
     try:
         aggs = list(client.get_aggs(
             ticker="LI",
