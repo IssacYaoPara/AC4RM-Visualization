@@ -62,7 +62,7 @@ st.markdown("""
             color: #FFFFFF !important;
         }
         
-        /* Reference Card 文字样式 */
+        /* Reference Card */
         .reference-card h3 {
             color: #FFFFFF !important;
             margin-bottom: 15px;
