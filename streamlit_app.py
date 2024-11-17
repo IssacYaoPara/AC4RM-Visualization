@@ -1,10 +1,10 @@
 import streamlit as st
-from copilot import Copilot
 import os
 import pandas as pd
 from datetime import datetime, timedelta
 from polygon.rest import RESTClient
 import numpy as np
+
 
 # page set
 st.set_page_config(layout="wide", page_icon="🚗")
@@ -62,7 +62,7 @@ st.markdown("""
             color: #FFFFFF !important;
         }
         
-        /* Reference Card */
+        /* Reference Card  */
         .reference-card h3 {
             color: #FFFFFF !important;
             margin-bottom: 15px;
@@ -161,13 +161,13 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Polygon API
-POLYGON_API_KEY = "k7hmTlM7ZTaRp8Ku2M7XSk3VJEr5IDSg"
+POLYGON_API_KEY = "Ab2Epl7aKl1vay6fFyau35MZVZyczTCr"
 client = RESTClient(api_key=POLYGON_API_KEY)
 
 @st.cache_data(ttl=300)
 def get_stock_data():
-    client = RESTClient(api_key=POLYGON_API_KEY)
     try:
+        client = RESTClient(api_key=POLYGON_API_KEY)
         ticker = "LI"
         aggs = list(client.get_aggs(
             ticker=ticker,
@@ -215,8 +215,8 @@ def get_stock_data():
 
 @st.cache_data(ttl=3600)
 def get_historical_data():
-    client = RESTClient(api_key=POLYGON_API_KEY)
     try:
+        client = RESTClient(api_key=POLYGON_API_KEY)
         aggs = list(client.get_aggs(
             ticker="LI",
             multiplier=1,
@@ -375,3 +375,4 @@ with ref_col:
 
 st.markdown("---")
 st.markdown(f"*Data updated as of {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}*")
+
