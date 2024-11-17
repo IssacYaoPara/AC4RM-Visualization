@@ -1,2 +1,9 @@
 streamlit
 pandas
+openai
+numpy
+datetime
+polygon
+os
+tenacity
+llama_index
