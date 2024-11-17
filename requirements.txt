@@ -4,5 +4,5 @@ openai
 numpy
 polygon-api-client
 tenacity
-llama_index、
+llama_index
 copilot
