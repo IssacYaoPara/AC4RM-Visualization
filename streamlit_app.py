@@ -4,6 +4,8 @@ import pandas as pd
 from datetime import datetime, timedelta
 from polygon.rest import RESTClient
 import numpy as np
+from openai import OpenAI
+from copilot import Copilot
 
 
 # page set
