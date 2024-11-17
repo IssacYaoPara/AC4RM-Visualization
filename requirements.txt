@@ -2,8 +2,6 @@ streamlit
 pandas
 openai
 numpy
-datetime
-polygon
-os
+polygon-api-client
 tenacity
 llama_index
